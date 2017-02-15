@@ -1,0 +1,5 @@
+<div class="container">
+  <input type="text" *ngIf="editableFlag" (keyUp.enter)="editableFlag=false" [(ngModel)]="title">
+ <span (click)="makeTitleEditable()"> {{title}}</span>
+  <app-simple-form></app-simple-form>
+</div>

@@ -1,0 +1,5 @@
+runtime: nodejs
+env: flex
+service: demo-angular2
+manual_scaling:
+      instances: 1

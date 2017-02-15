@@ -1,0 +1,22 @@
+<div style="margin-top: 20px;width:50%;">
+    <form>
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+                <label for="guestName">Enter Guest Name:</label>
+                <input #guestName type="text" class="form-control" style="width:50%">
+                <button 
+                style="margin-top: 8px"
+                (click)="enterGuestBook(guestName.value);guestName.value=''" class="btn btn-primary">Enter!</button><br/>
+            </div>
+
+
+            <ul class="list-group" style="padding: 3px;">
+                <li *ngFor="let eachGuest of guests" class="list-group-item">
+                    {{eachGuest}}
+                </li>
+            </ul>
+        </div>
+    </form>
+    <button *ngIf="guests.length!=0" (click)="clearGuestBook()" class="btn btn-danger">Clear!</button><br/>
+</div>
